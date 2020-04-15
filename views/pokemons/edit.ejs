@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>PokemonGo</title>
+</head>
+
+<body>
+  <br>
+  <h1>Elixir-Fox Pokemon form</h1>
+  <br />
+  <%- include('../partials/error.ejs') %>
+  <div class="container-form">
+    <form action="/pokemons/edit/<%=pokemon.id%>" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="<%=pokemon.name%>"></input>
+      <br />
+      <label for="type">Type</label>
+      <input type="text" id="type" name="type" value="<%=pokemon.type%>"></input>
+      <br />
+      <input id=submit type="submit" value="submit" style="font-family: Covered By Your Grace, cursive ">
+
+    </form>
+    <br />
+  </div>
+  <a href="/pokemons" class='list'><button> list of pokemons</button></a>
+  <%- include('../partials/footer') %>
+</body>
+
+</html>
